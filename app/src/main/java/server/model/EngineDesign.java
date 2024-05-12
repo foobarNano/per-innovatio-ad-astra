@@ -9,7 +9,7 @@ public class EngineDesign extends Design implements Physical
     private final double THRUST_S;
     private final double MASS_S;
     private final double CONSUMPTION_S;
-    private final int VALUE_S;
+    private int VALUE_S;
 
     protected EngineDesign(String brand, String model, int thruster_count, double thrust, double mass, double consumption, FuelType fuel, int value)
     {
@@ -21,6 +21,8 @@ public class EngineDesign extends Design implements Physical
         this.CONSUMPTION_S = consumption;
         this.VALUE_S = value;
     }
+
+    public void setCreditValue(int value) { this.VALUE_S = value; }
 
     public FuelType getFuelType() { return FUEL; }
     public double getThrust() { return THRUSTER_COUNT * THRUST_S; }

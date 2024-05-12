@@ -9,7 +9,7 @@ public class HullDesign extends Design implements Physical  // Dziedziczenie wie
     private final double LENGTH;
     private final MaterialType MATERIAL;
     private final double MASS;  // Atrybut wyliczalny
-    private final int VALUE;
+    private int VALUE;
 
     protected HullDesign(String brand, String model, MaterialType material, double length, int value)
     {
@@ -19,6 +19,8 @@ public class HullDesign extends Design implements Physical  // Dziedziczenie wie
         this.VALUE = value;
         this.MASS = length * material.DENSITY * MASS_CONSTANT;
     }
+
+    public void setCreditValue(int value) { this.VALUE = value; }
 
     public MaterialType getMaterial() { return MATERIAL; }
     public double getLength() { return LENGTH; }

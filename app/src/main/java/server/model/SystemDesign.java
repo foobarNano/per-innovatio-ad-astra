@@ -5,7 +5,7 @@ import server.model.enumerable.SystemType;
 public class SystemDesign extends Design
 {
     private final SystemType TYPE;
-    private final int VALUE;
+    private int VALUE;
 
     protected SystemDesign(String brand, String model, SystemType type, int value)
     {
@@ -13,6 +13,8 @@ public class SystemDesign extends Design
         this.TYPE = type;
         this.VALUE = value;
     }
+
+    public void setCreditValue(int value) { this.VALUE = value; }
 
     public SystemType getSystemType() { return TYPE; }
 
