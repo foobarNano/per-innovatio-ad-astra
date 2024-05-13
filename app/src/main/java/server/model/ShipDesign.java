@@ -20,7 +20,7 @@ public class ShipDesign extends Design implements Physical  // Wielodziedziczeni
     }
 
     public String getVersion() { return VERSION; }
-    public MaterialType getMaterial() { return HULL.getMaterial(); }    // Dziedziczenie dynamiczne
+    public MaterialType getMaterial() { return HULL.getMaterial(); }
     public double getLength() { return HULL.getLength(); }
     public FuelType getFuelType() { return ENGINE.getFuelType(); }
     public double getThrust() { return ENGINE.getThrust(); }
